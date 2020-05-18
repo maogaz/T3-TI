@@ -4,10 +4,14 @@ const socket = io('wss://le-18262636.bitzonte.com', {
 });
 
 function desconectar() {
-    socket.disconnect()
+    //socket.disconnect()
+    socket.emit("manual-disconnection", socket.id);
+    socket.close();
+
 };
 function conectar() {
-    socket.connect()
+    socket.emit("manual-connection", socket.id);
+    socket.open();
 };
 
 socket.on('EXCHANGES', (data) => {
