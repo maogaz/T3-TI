@@ -2,32 +2,99 @@
 <html>
 
 <head>
+<link rel="stylesheet" type="text/css" href="index.css">
 <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
+<script src= "main.js"></script>
+
+
+
+<!-- CSS -->
+<div id="wrapper">
+  <header id="js-header">
+      <div class="container clearfix">
+          <h1 id="logo">TAREA 3</h1>
+          <nav>
+              <!-- <a href="#bacon">Bacon</a>
+              <a href="#sausage">Sausage</a>
+              <a href="#biltong">Biltong</a> -->
+          </nav>
+      </div>
+  </header>
+
+  <button id="prendido" onclick="conectar()">Conectar</button>
+  <button id="apagado" onclick="desconectar()">Desconectar</button>
+  <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
 <body>
-  <h1> TAREA 3</h1>
 
-  <button id= "on" onclick="desconectar()">Conectar</button>
-  <button id= "off" onclick="conectar()">Desconectar</button>
 
-  <div id="ticker">
+
+
+<div id="table_stocks">
+<h2>Bordered Table</h2>
+<p>Use the CSS border property to add a border to the table.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+</div>
+
+
+      <div id="content">
+          <section>
+              <div class="contenido">
+                  <h1>I Second That Emotion</h1>
+                  <button id="prendido" onclick="conectar()">Conectar</button>
+                  <button id="apagado" onclick="desconectar()">Desconectar</button>
+
+                  <div id="ticker">
+                  </div>
+                  <div id="value">
+                  </div>
+                  <div id="time">
+                  </div>
+                  <div id="stocks">
+                  </div>
+                  <div id="linechart_material"></div>
+                  <div id="linechart_material2"></div>
+                  <!-- <% info_episodios = [] %> -->
+                  <!-- <%  info_episodios.forEach(function(info) { %> -->
+                  <!-- <<%= <div id=info> %></> -->
+                  <!-- <%})  %> -->
+              </div>
+          </section>
+
+     </div>
   </div>
-  <div id="value">
-  </div>
-  <div id="time">
-  </div>
-  <div id="stocks">
-  </div>
+</div>
 
-
-  <div id="linechart_material"></div>
-
-  <script src= "main.js"></script>
-
-</body>
-</body>
 </html>
