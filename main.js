@@ -3,6 +3,13 @@ const socket = io('wss://le-18262636.bitzonte.com', {
     path: '/stocks'
 });
 
+function desconectar() {
+    socket.disconnect()
+};
+function conectar() {
+    socket.connect()
+};
+
 socket.on('EXCHANGES', (data) => {
   //console.log(data);
   x = document.getElementById('stocks');
